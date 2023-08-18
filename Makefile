@@ -1,3 +1,6 @@
+farthest_insertion: farthest_insertion.cpp
+	g++ farthest_insertion.cpp -ofi
+
 nearest_neighbor: nearest_neighbor.cpp
 	g++ nearest_neighbor.cpp -onn
 

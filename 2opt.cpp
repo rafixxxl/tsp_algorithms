@@ -108,6 +108,8 @@ int main() {
         points.push_back({x, y});
     }
     
+    auto start = chrono::high_resolution_clock::now();
+
     vector<int> path = tspRandomInsertion(points);
     
     cout << calculateRouteLength(points, path) << endl;
@@ -118,5 +120,10 @@ int main() {
 
     cout << calculateRouteLength(points, path) << endl;
     
+    auto end = chrono::high_resolution_clock::now();
+    double duration = chrono::duration_cast<chrono::microseconds>(end - start).count() / 1000000.0;
+    cout << duration << "s." << endl;
+
+
     return 0;
 }
